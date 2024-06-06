@@ -132,7 +132,7 @@ bool CreateBase::createInitialData()
         QSqlQuery query(m_db);
 
         if (!query.exec("INSERT INTO Autorizactia (name, family, patronymic, role, password) "
-                        "VALUES ('', '', '', 'Администратор', '')")) {
+                        "VALUES ('Даниил', 'Логвинец', 'Сергеевич', 'Администратор', '1234')")) {
             qDebug() << "Не удалось вставить пользователя в таблицу Autorizactia:" << query.lastError().text();
             return false;
         }

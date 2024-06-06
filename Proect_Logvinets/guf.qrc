@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/guf">
         <file>guf.jpg</file>
+        <file>guf.ico</file>
     </qresource>
 </RCC>

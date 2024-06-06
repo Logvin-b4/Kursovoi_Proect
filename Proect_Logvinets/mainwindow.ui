@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>348</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Main window background */
+QMainWindow {
+    background-color: #f5f5f5; /* Светло-серый фон */
+}
+
+/* General button style */
+QPushButton {
+    background-color: #4CAF50; /* Зеленый фон для всех кнопок */
+    border: none; /* Без границы */
+    color: white; /* Белый текст */
+    padding: 10px 24px; /* Внутренний отступ */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Без подчеркивания */
+    font-size: 18px; /* Размер шрифта */
+    margin: 4px 2px; /* Внешний отступ */
+    border-radius: 12px; /* Закругленные углы */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* Темно-зеленый фон при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #398439; /* Ещё темнее при нажатии */
+}
+
+/* Line edit fields */
+QLineEdit {
+    border: 1px solid #ccc; /* Светло-серая граница */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px; /* Внутренний отступ */
+    font-size: 16px; /* Размер шрифта */
+    background-color: #fff; /* Белый фон */
+    margin: 4px 0; /* Внешний отступ */
+}
+
+/* Line edit focus style */
+QLineEdit:focus {
+    border: 1px solid #4CAF50; /* Зеленая граница при фокусе */
+}
+
+/* Labels */
+QLabel {
+    font-size: 18px; /* Размер шрифта */
+    color: #333; /* Темно-серый текст */
+}
+
+/* Message box buttons */
+QMessageBox QPushButton {
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none; /* Без границы */
+    padding: 10px 20px; /* Внутренний отступ */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #45a049; /* Темно-зеленый фон при наведении */
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #398439; /* Ещё темнее при нажатии */
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="loginButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>280</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Войти</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>331</width>
+      <height>243</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>76</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16555532</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>35</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Имя</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="nameEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="minimumSize">
+          <size>
+           <width>76</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Фамилия</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="familyEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>76</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Отчество</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="patronymicEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>76</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Пароль</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="passwordEdit"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Введите данные:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>348</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

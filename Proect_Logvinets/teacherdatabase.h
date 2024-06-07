@@ -8,7 +8,7 @@ class TeacherDataBase
 public:
     TeacherDataBase();
     bool openDatabase(const QString &path);
-    bool getStudentData(int userIdPr, QString &name, QString &family, QString &patronymic, QString &address, QString &phone, QString &group);
+    bool getStudentData(int userIdPr, QString &name, QString &family, QString &patronymic);
     bool getFacultatives(int userIdPr, QVector<QVector<QString>> &facultativesData);
     bool getUniqueFacultativeNames(int userIdPr, QStringList &facultativeNames);
     bool isStudentEnrolledInFacultative(const QString &name, const QString &family, const QString &patronymic, const QString &facultative);

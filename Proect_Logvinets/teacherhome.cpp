@@ -16,8 +16,8 @@ TeacherHome::TeacherHome(QWidget *parent, int userIdPr) :
     // Используйте userId для загрузки данных студента
     TeacherDataBase db;
     if (db.openDatabase("database777.db")) {
-        QString name, family, patronymic, address, phone, group;
-        if (db.getStudentData(userIdPr, name, family, patronymic, address, phone, group)) {
+        QString name, family, patronymic;
+        if (db.getStudentData(userIdPr, name, family, patronymic)) {
             ui->NamePrEdit->setText(name);
             ui->SurnamePrEdit->setText(family);
             ui->PatronumicPrEdit->setText(patronymic);

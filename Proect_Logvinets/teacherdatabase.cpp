@@ -17,11 +17,10 @@ bool TeacherDataBase::openDatabase(const QString &path) {
     }
 }
 
-bool TeacherDataBase::getStudentData(int userIdPr, QString &name, QString &family, QString &patronymic, QString &address, QString &phone, QString &group) {
+bool TeacherDataBase::getStudentData(int userIdPr, QString &name, QString &family, QString &patronymic) {
     QSqlQuery query;
-    query.prepare("SELECT a.name, a.family, a.patronymic, d.address, d.phone, d.group_name "
+    query.prepare("SELECT a.name, a.family, a.patronymic "
                   "FROM Autorizactia a "
-                  "JOIN DopInfo d ON a.id = d.id_Autorizactia "
                   "WHERE a.id = :userIdPr");
     query.bindValue(":userIdPr", userIdPr);
 
@@ -29,9 +28,7 @@ bool TeacherDataBase::getStudentData(int userIdPr, QString &name, QString &famil
         name = query.value(0).toString();
         family = query.value(1).toString();
         patronymic = query.value(2).toString();
-        address = query.value(3).toString();
-        phone = query.value(4).toString();
-        group = query.value(5).toString();
+
         return true;
     } else {
         qDebug() << "Ошибка при получении данных преподавателя:" << query.lastError().text();
